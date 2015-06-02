@@ -1,5 +1,5 @@
 // Methods for stubbing HTTP requests and responses
-module.exports = {
+module.exports = { 
 
   response: function() {
     this._ended = false;

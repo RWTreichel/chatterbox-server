@@ -1,6 +1,6 @@
 /* Import node's http module: */
 var http = require("http");
-var blob = require("./request-handler.js")
+var blob = require("./request-handler.js");
 
 
 // Every server needs to listen on a port with a unique number. The
@@ -23,7 +23,7 @@ var ip = "127.0.0.1";
 // incoming requests.
 //
 // After creating the server, we will tell it to listen on the given port and IP. */
-var server = http.createServer(blob.handleRequest);
+var server = http.createServer(blob.requestHandler);
 console.log("Listening on http://" + ip + ":" + port);
 server.listen(port, ip);
 
@@ -34,9 +34,10 @@ server.listen(port, ip);
 // on the command line.
 //
 // To connect to the server, load http://127.0.0.1:3000 in your web
-// browser.
+// browser. http://127.0.0.1:5858/
 //
 // server.listen() will continue running as long as there is the
 // possibility of serving more requests. To stop your server, hit
 // Ctrl-C on the command line.
+
 
